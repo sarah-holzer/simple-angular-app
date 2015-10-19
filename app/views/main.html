@@ -1,0 +1,9 @@
+<select ng-model="selectedOption" ng-options="option.name for option in dropDownOptions" class="form-control"></select>
+<button ng-click="fetchList()" type="submit" class="btn btn-primary">Show List</button>
+
+<div class="list-group">
+  <a ng-click="showDetail(item)" class="list-group-item" ng-repeat="item in list">
+    <h4 class="list-group-item-heading">{{item.name}}</h4>
+    <p class="list-group-item-text preview-text" ng-bind-html="item.description"></p>
+  </a>
+</div>
